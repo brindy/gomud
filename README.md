@@ -1,4 +1,4 @@
-# godmud 
+# gomud 
 
 I'm learning Go (golang? whatever), so decided to write a MUD.
 
