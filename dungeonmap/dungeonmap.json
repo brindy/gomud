@@ -1,0 +1,51 @@
+
+{
+	"start-area": "start",
+	"areas": {
+		"start": {
+			"on-entry": "The white light surrounding you fades away revealing an infinitely big dark room and two doors.",
+			"look": "A dark room that appears to be infinitely big. There are two doors which are somehow just a step away.",
+			"exits": {
+				"north": {
+					"to": "You are dead."
+				},
+				"south": {
+					"to": "outside"
+				}
+			}
+		},
+		"outside": {
+			"on-entry": "You emerge into daylight. There are trees and a forest path.",
+			"look": "There are trees all around you.  A well trodden path heads south.",
+			"exits": {
+				"east": {
+					"to": "dense-brush"
+				},
+				"south": {
+					"to": "the-glade"
+				}
+			}
+		},
+		"the-glade": {
+			"on-entry": "The trees part before you to reveal a large open area of grass.",
+			"look": "An almost perfectly circular glade surrounded by trees.",
+			"exits": {
+				"north": {
+					"to": "outside"
+				}
+			}
+		},
+		"dense-brush": {
+			"on-entry": "The trees and undergrowth becomes incredibly dense.",
+			"look": "You are surrounded by trees and dense undergrowth.",
+			"exits": {
+				"west": {
+					"to": "outside"
+				}
+			}
+		},
+		"you-are-dead": {
+			"on-entry": "You are dead."
+		}
+	}
+}
