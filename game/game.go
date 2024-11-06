@@ -2,16 +2,33 @@ package game
 
 import (
 	"fmt"
-	"net"
+	"io"
 )
 
 import (
 	"gomud/dungeonmap"
 )
 
-func HandleConnection(client net.Conn, dungeonMap dungeonmap.DungeonMap) {
+type Client interface {
+
+	io.Reader
+	io.Writer
+	Close() error 
+
+}
+
+func HandleConnection(client Client, dungeonMap dungeonmap.DungeonMap) {
 
 	fmt.Println(client)
-	fmt.Println(dungeonMap)
-	
+	fmt.Println(dungeonMap.StartArea)
+
+	error := client.Close()
+	if error != nil {
+		panic(error) // should be a warning
+	}
+
+	client.Write([]byte("Hello Client"))
+	fmt.Println("closing")
+	client.Close()
+
 }

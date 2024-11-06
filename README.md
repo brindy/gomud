@@ -26,4 +26,8 @@ More to come.
 
 ## Running
 
-`go run main.go dungeonmap/dungeonmap.json`
+`go run main.go dungeonmap/dungeonmap.json 20999`
+
+* dungeonmap/dungeonmap.json - is the default game map. You can change this, but there may be harded logic which depends on the areas in the JSON.
+* 20999 - the port to run the server on.  Use `telnet localhost 20999` to connect to the MUD.
+

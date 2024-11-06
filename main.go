@@ -29,7 +29,7 @@ func main() {
 	if error != nil {
 		panic(error)
 	}
-	fmt.Println(dungeonMap)
+	// fmt.Println(dungeonMap)
 
 	// Set up a server
 	listener, error := net.Listen("tcp", ":" + os.Args[2])
