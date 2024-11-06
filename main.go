@@ -20,7 +20,7 @@ func main() {
 	}
 
 	// Start a server
-	fmt.Println("Starting server", dungeonMap)
+	fmt.Println("Starting server")
 
 	// On connect create a new MUD client and share the server state
 

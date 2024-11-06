@@ -9,10 +9,17 @@ import (
 
 type DungeonMap struct {
 	StartArea string `json:"start-area"`
+	Areas map[string]DungeonArea `json:"areas"`
 }
 
 type DungeonArea struct {
+	OnEntry string `json:"on-entry"`
+	Look string `json:"look"`
+	Exits map[string]DungeonAreaExit `json:"exits"`
+}
 
+type DungeonAreaExit struct {
+	To string `json:"to"`
 }
 
 func ReadDungeonMap(fileName string) (DungeonMap, error) {
